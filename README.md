@@ -22,7 +22,7 @@
   </ul>
   
   <h3>
-  Current Work Status - In Progress - Backend 
+  Current Work Status  - Backend - Finalzing
   </h3>
   <p>
   Recent work 
@@ -44,6 +44,18 @@
     </li>
      <li>
       Added Controllers - MenuItem & MealType - 10:00am
+    </li>
+    </ul>
+  </p>
+  
+  <h3>
+  Current Work Status  - FrontEnd - In Progress
+  </h3>
+  <p>
+  Recent work 
+  <ul>
+   <li>
+     Added Services - MenuItems & MealType - 10:27am
     </li>
     </ul>
   </p>
