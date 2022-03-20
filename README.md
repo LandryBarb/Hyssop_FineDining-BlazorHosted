@@ -40,7 +40,7 @@
       Added MenuItem Services 9:35am
     </li>
      <li>
-      Added MenuItem Services 9:41am
+      Added MealType Services 9:41am
     </li>
     </ul>
   </p>
