@@ -57,5 +57,22 @@
    <li>
      Added Services - MenuItems & MealType - 10:27am
     </li>
+    <li>
+      **Bug Fix** Unhandled Exeception - Components not rendering
+    </li>
+    <li>
+      Markup of Components       
+    </li>
+      <ul>
+         <li>
+          Menu Items List
+        </li>
+        <li>
+          Menu Item Details
+        </li>
+         <li>
+          Featured Items
+        </li>
+      </ul>
     </ul>
   </p>
