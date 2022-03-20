@@ -1,8 +1,17 @@
-using Microsoft.AspNetCore.ResponseCompression;
+global using Hyssop.Server.Data;
+global using Hyssop.Shared;
+global using Hyssop.Shared.DTO;
+global using Hyssop.Shared.Menu;
+global using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddDbContext<HyssopDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("HyssopDbConnection"));
+});
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();

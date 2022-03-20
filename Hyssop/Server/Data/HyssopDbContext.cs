@@ -11,8 +11,8 @@ namespace Hyssop.Server.Data
 
         }
         public DbSet<MenuItem> MenuItems { get; set; }
-        public DbSet<MenuItemType> MenuItemType { get; set; }
-        public DbSet<MealType> MealType { get; set; }
+        public DbSet<MenuItemType> MenuItemTypes { get; set; }
+        public DbSet<MealType> MealTypes { get; set; }
         public DbSet<MenuItemVariant> MenuItemVariants { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

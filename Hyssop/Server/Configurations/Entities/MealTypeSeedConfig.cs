@@ -19,18 +19,18 @@ namespace Hyssop.Server.Configurations.Entities
                 },
                  new MealType
                  {
-                     Id = 1,
+                     Id = 2,
                      Name = "Lunch",
                      Url = "lunch",
                      ImageUrl = "../images/background/bg1.jpg"
                  },
                   new MealType
                   {
-                      Id = 1,
+                      Id = 3,
                       Name = "Dinner",
                       Url = "dinner",
                       ImageUrl = "../images/background/bg1.jpg"
-                  },
+                  }
 
 
                 );
