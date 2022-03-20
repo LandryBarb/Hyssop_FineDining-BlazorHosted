@@ -38,7 +38,7 @@ namespace Hyssop.Server.Services.MenuItemService
             return response;
         }
 
-        public async Task<ServiceResponse<List<MenuItem>>> GetMenuItemByMealType(string mealTypeUrl)
+        public async Task<ServiceResponse<List<MenuItem>>> GetMenuItemsByMealType(string mealTypeUrl)
         {
             var response = new ServiceResponse<List<MenuItem>>
             {
@@ -96,7 +96,7 @@ namespace Hyssop.Server.Services.MenuItemService
             return response;
         }
 
-        public async Task<ServiceResponse<MenuItemSearchResultDTO>> SearchProducts(string searchText, int page)
+        public async Task<ServiceResponse<MenuItemSearchResultDTO>> SearchMenuItems(string searchText, int page)
         {
             var pageResults = 2f;
             var pageCount = Math.Ceiling((await FindMenuItemsBySearchText(searchText)).Count / pageResults);

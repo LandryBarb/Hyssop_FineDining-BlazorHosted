@@ -3,6 +3,8 @@ global using Hyssop.Shared;
 global using Hyssop.Shared.DTO;
 global using Hyssop.Shared.Menu;
 global using Microsoft.EntityFrameworkCore;
+using Hyssop.Server.Services.MealTypeService;
+using Hyssop.Server.Services.MenuItemService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +17,13 @@ builder.Services.AddDbContext<HyssopDbContext>(options =>
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IMenuItemService, MenuItemService>();
+builder.Services.AddScoped<IMealTypeService, MealTypeService>();
+
 
 var app = builder.Build();
 
