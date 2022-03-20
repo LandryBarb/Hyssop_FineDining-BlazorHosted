@@ -1,11 +1,27 @@
 ﻿@use '../abstracts' as *;
 @use '../base' as *;
 
+/**
+Using mix() will help control color lighten and darken better
+**/
 
 .btn{
     @include hover-lift();
+    color:red;
+    background-color:blue;
+    @extend %btn;
 }
 
+.btn-primary{
+    color:white;
+    background-color:red;
+    @extend %btn;
+}
 .card {
     @include pseudo();
+    height:2rem;
+    width:2rem;
+    border:solid 2px blue;
+    background-color: mix($color, white, 20%);
+
 }

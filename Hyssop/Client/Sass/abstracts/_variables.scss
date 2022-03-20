@@ -1,3 +1,10 @@
-﻿
+﻿$breakpoints: ( 
+    small: 40em, 
+    medium: 65em 
+
+);
+
 
 $transition-base : transform 350ms ease-in-out;
+
+$color: red;

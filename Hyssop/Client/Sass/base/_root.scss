@@ -2,6 +2,7 @@
 @use './typography' as *;
 @use '../media-queries' as *;
 
+/**##### ROOT #######**/
 :root {
     /**Colors**/
     @each $color, $shades in $colors {
@@ -31,3 +32,4 @@
         }
     }
 }
+/**##### END ROOT #######**/

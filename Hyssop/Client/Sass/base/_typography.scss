@@ -22,20 +22,3 @@ $type-scale:
     )
     );
 
-@each $color, $shades in $colors
-{
-    /**#{$color} Colors**/
-    @each $shade, $value in $shades
-    {
-        .txt_#{$color}_#{$shade}
-        {
-            color: $value;
-        }
-        .bg_#{$color}_#{$shade}
-        {
-            background-color: $value;
-        }
-    }
-    /** End #{$color} Colors**/
-
-}

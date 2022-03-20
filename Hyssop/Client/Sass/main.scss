@@ -1,4 +1,8 @@
-﻿@use './base' as *;
+﻿@use './base/reset' ;
+@use './base/root';
+@use './base/typography';
+
+
 
 
 @use './Home' as *;
