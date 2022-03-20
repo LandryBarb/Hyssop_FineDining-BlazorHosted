@@ -39,5 +39,11 @@
     <li>
       Added MenuItem Services 9:35am
     </li>
+     <li>
+      Added MealType Services 9:41am
+    </li>
+     <li>
+      Added Controllers - MenuItem & MealType - 10:00am
+    </li>
     </ul>
   </p>
