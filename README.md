@@ -1,5 +1,8 @@
 ﻿# Hyssop_FineDining-BlazorHosted
-
+<h1>
+  DevLog 2022-3-20 
+  </h1>
+  
 <h2>
   Creation of Fine Dining Restaurant
   </h2>
@@ -19,8 +22,22 @@
   </ul>
   
   <h3>
-  Current Work Status - In Progress
+  Current Work Status - In Progress - Backend 
   </h3>
   <p>
-  Recent work : Created starting class models
+  Recent work 
+  <ul>
+    <li>
+      Created class models  - 7:32am
+    </li>
+    <li>
+      Created Seed Data Configurations - 8:00am
+    </li>
+    <li>
+      Created Initial Database with seed data migration - 8:52am
+    </li>
+    <li>
+      Added MenuItem Services 9:35am
+    </li>
+    </ul>
   </p>
