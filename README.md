@@ -22,7 +22,7 @@
   </ul>
   
   <h3>
-  Current Work Status - In Progress
+  Current Work Status - In Progress - Backend 
   </h3>
   <p>
   Recent work 
@@ -35,6 +35,9 @@
     </li>
     <li>
       Created Initial Database with seed data migration - 8:52am
+    </li>
+    <li>
+      Added MenuItem Services 9:35am
     </li>
     </ul>
   </p>
