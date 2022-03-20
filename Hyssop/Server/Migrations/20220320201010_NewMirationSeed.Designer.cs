@@ -3,6 +3,7 @@ using Hyssop.Server.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hyssop.Server.Migrations
 {
     [DbContext(typeof(HyssopDbContext))]
-    partial class HyssopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220320201010_NewMirationSeed")]
+    partial class NewMirationSeed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

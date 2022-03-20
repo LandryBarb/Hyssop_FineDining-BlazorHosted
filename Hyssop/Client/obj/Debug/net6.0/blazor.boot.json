@@ -196,15 +196,15 @@
       "mscorlib.dll": "sha256-tSv6NEbBsHuM5P3AUJGybafS0hxrXlzDmmcyG2eGk3I=",
       "netstandard.dll": "sha256-klcvWVyHimPfDxg6W1A076EKpCB5ySxjtc7sxJEsGgE=",
       "System.Private.CoreLib.dll": "sha256-Y8kdbfPQ0YoYLGbOgzRmoVsnuMYNlA1hvLvDWFTtzrk=",
-      "Hyssop.Shared.dll": "sha256-hjUguGWidvZJ89\/bD6I+9ZcLRsJuT8G2b6z5IkhtJmQ=",
-      "Hyssop.Client.dll": "sha256-sXVCYuX+Hd014PJxMQCZBp9HH8XOelvV9thulBt1mjM="
+      "Hyssop.Shared.dll": "sha256-NG1wF5gaHvdxnfijaqf7HECSXnWqEsZHZiZaO6O3pds=",
+      "Hyssop.Client.dll": "sha256-s0p445sG3LnmOwT12NiaElT9okdMQbKsZwQmpbcl2sQ="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "Hyssop.Shared.pdb": "sha256-dtUJi4Cb7HNzeMTuq\/NnETzkJDXfdRGbVRUfxSSzh7U=",
-      "Hyssop.Client.pdb": "sha256-TGj6QX\/HMnMZLQ3LNVOyZonzb87vH\/Zs+pPfRW8HXQM="
+      "Hyssop.Shared.pdb": "sha256-CZneCB3wfW4WT4izeVLJlFLvMDhLXVRAIHVe1z5x04U=",
+      "Hyssop.Client.pdb": "sha256-IEUZO4vSI8zBSpSRfl2YT0O2XpkZTTRNSlbI10d\/Ryg="
     },
     "runtime": {
       "dotnet.6.0.3.k4rg04dpep.js": "sha256-pRmcHKZN4T\/YbX9dj6ITT4sNtkJ9w07OLcwl4645nPg=",

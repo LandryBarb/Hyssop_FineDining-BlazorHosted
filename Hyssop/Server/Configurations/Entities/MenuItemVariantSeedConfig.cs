@@ -1,6 +1,4 @@
-﻿using Hyssop.Shared.Menu;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Hyssop.Server.Configurations.Entities
 {
@@ -8,6 +6,8 @@ namespace Hyssop.Server.Configurations.Entities
     {
         public void Configure(EntityTypeBuilder<MenuItemVariant> builder)
         {
+            builder.HasKey(m => new { m.MenuItemId, m.MenuItemTypeId });
+
             builder.HasData(
                 //burger
                 new MenuItemVariant

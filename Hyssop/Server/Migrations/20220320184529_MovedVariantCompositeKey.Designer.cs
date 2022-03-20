@@ -3,6 +3,7 @@ using Hyssop.Server.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hyssop.Server.Migrations
 {
     [DbContext(typeof(HyssopDbContext))]
-    partial class HyssopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220320184529_MovedVariantCompositeKey")]
+    partial class MovedVariantCompositeKey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -102,16 +104,16 @@ namespace Hyssop.Server.Migrations
                             Description = "Doctrine—what Christians believe—directly influences how they live. The biblical truths about God, humanity, and the world are not merely about knowing more—they are also about loving God and making sense of this life and the life to come. But what happens when there is disparity between ther—putting the truths of God’s word on display for all the world to see",
                             ImageUrl = "../images/products/burger1.jpg",
                             MealTypeId = 3,
-                            Name = "Beyond Burger",
+                            Name = "Burger",
                             Special = true
                         },
                         new
                         {
                             Id = 2,
-                            Description = "Doctrine—what Christians believe—directly influences how they live. The biblical truths about God, humanity, and the world are not merely about knowing more—they are also about loving God and making sense of this life and the life to come. But what happens when there is disparity between what believers confess and how they live? In his latest book Do You Believe tor and Father—putting the truths of God’s word on display for all the world to see",
+                            Description = "Doctrine—what Christians believe—directly influences how they live. The biblical truths about God, humanity, and the world are not merely about knowing more—they are also about loving God and making sense of this life and the life to come. But what happens when there is disparity between what believers confess and how they live? In his latest book Do You Believe ?  pastor and best - selling author Paul David Tripp takes a close look at 12 core doctrines and how they engage and transform the human heart and mind.According to Tripp, true belief is always lived. To demonstrate,  he unpacks each doctrine and presents its relevance for the Christian life.As readers explore topics such as the doctrine of God, the holiness of God, and the doctrine of Scripture, they will be fueled to fall deeper in love with and stand in awe of their Creator and Father—putting the truths of God’s word on display for all the world to see",
                             ImageUrl = "../images/products/burger2.jpg",
                             MealTypeId = 3,
-                            Name = "Street Tacos",
+                            Name = "taco",
                             Special = true
                         });
                 });

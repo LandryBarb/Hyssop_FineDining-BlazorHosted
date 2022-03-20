@@ -1,10 +1,11 @@
+global using Hyssop.Server.Configurations.Entities;
 global using Hyssop.Server.Data;
+global using Hyssop.Server.Services.MealTypeService;
+global using Hyssop.Server.Services.MenuItemService;
 global using Hyssop.Shared;
 global using Hyssop.Shared.DTO;
 global using Hyssop.Shared.Menu;
 global using Microsoft.EntityFrameworkCore;
-using Hyssop.Server.Services.MealTypeService;
-using Hyssop.Server.Services.MenuItemService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,6 +40,7 @@ else
     app.UseHsts();
 }
 
+app.UseSwagger();
 app.UseHttpsRedirection();
 
 app.UseBlazorFrameworkFiles();

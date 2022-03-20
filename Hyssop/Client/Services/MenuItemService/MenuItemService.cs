@@ -11,23 +11,23 @@ namespace Hyssop.Client.Services.MenuItemService
             _http = http;
         }
         public List<MenuItem> MenuItems { get; set; } = new List<MenuItem>();
-        public string Message { get; set; } = "Loading MenuItems";
+        public string Message { get; set; } = "Loading Menu Items";
         public int CurrentPage { get; set; } = 1;
         public int PageCount { get; set; } = 0;
         public string LastSearchText { get; set; } = string.Empty;
 
         public event Action MenuItemsChanged;
 
-        public async Task<ServiceResponse<MenuItem>> GetMenuItem(int productId)
+        public async Task<ServiceResponse<MenuItem>> GetMenuItem(int menuItemId)
         {
-            var result = await _http.GetFromJsonAsync<ServiceResponse<MenuItem>>($"api/menuItem/{productId}");
+            var result = await _http.GetFromJsonAsync<ServiceResponse<MenuItem>>($"api/menuItem/{menuItemId}");
             return result;
         }
 
         public async Task GetMenuItems(string? mealTypeUrl = null)
         {
             var result = mealTypeUrl == null ?
-                await _http.GetFromJsonAsync<ServiceResponse<List<MenuItem>>>("api/menuItem/specials") :
+                await _http.GetFromJsonAsync<ServiceResponse<List<MenuItem>>>("api/menuItem/special") :
                 await _http.GetFromJsonAsync<ServiceResponse<List<MenuItem>>>($"api/menuItem/mealType/{mealTypeUrl}");
             ;
             if (result != null && result.Data != null)
@@ -38,7 +38,7 @@ namespace Hyssop.Client.Services.MenuItemService
             PageCount = 0;
             if (MenuItems.Count == 0)
             {
-                Message = "No MenuItems Found.";
+                Message = "No Menu Items Found.";
             }
 
             MenuItemsChanged.Invoke();
@@ -65,7 +65,7 @@ namespace Hyssop.Client.Services.MenuItemService
             }
             if (MenuItems.Count == 0)
             {
-                Message = "No MenuItems Found.";
+                Message = "No Menu Items Found.";
             }
             MenuItemsChanged?.Invoke();
         }

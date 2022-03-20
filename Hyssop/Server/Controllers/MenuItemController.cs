@@ -1,5 +1,4 @@
-﻿using Hyssop.Server.Services.MenuItemService;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Hyssop.Server.Controllers
 {
@@ -26,7 +25,7 @@ namespace Hyssop.Server.Controllers
             return Ok(result);
         }
 
-        [HttpGet("mealtype/{mealTypeUrl}")]
+        [HttpGet("mealType/{mealTypeUrl}")]
         public async Task<ActionResult<ServiceResponse<MenuItem>>> GetMenuItemsByCategory(string mealTypeUrl)
         {
             var result = await _menuItemService.GetMenuItemsByMealType(mealTypeUrl);
@@ -49,7 +48,7 @@ namespace Hyssop.Server.Controllers
             return Ok(result);
         }
 
-        [HttpGet("specials")]
+        [HttpGet("special")]
         public async Task<ActionResult<ServiceResponse<List<MenuItem>>>> GetFeaturedMenuItems()
         {
             var result = await _menuItemService.GetSpecialMenuItems();

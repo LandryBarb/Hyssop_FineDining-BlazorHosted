@@ -26,6 +26,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Landry Barb II/Documents/WebDevelopment/Blazor/PortfolioProjects/FullStack/Hyssop/Hyssop/Client/Features/MenuItemDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = RmVhdHVyZXNcTWVudUl0ZW1EZXRhaWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Landry Barb II/Documents/WebDevelopment/Blazor/PortfolioProjects/FullStack/Hyssop/Hyssop/Client/Shared/FeaturedItem.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZlYXR1cmVkSXRlbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Landry Barb II/Documents/WebDevelopment/Blazor/PortfolioProjects/FullStack/Hyssop/Hyssop/Client/Shared/MenuItems.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1lbnVJdGVtcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Landry Barb II/Documents/WebDevelopment/Blazor/PortfolioProjects/FullStack/Hyssop/Hyssop/Client/Shared/SearchComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNlYXJjaENvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Landry Barb II/Documents/WebDevelopment/Blazor/PortfolioProjects/FullStack/Hyssop/Hyssop/Client/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

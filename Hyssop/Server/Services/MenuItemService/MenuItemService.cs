@@ -14,7 +14,7 @@ namespace Hyssop.Server.Services.MenuItemService
         {
             var response = new ServiceResponse<List<MenuItem>>()
             {
-                Data = await _db.MenuItems.Include(p => p.MenuItemVariants).ToListAsync()
+                Data = await _db.MenuItems.Include(m => m.MenuItemVariants).ToListAsync()
             };
 
             return response;
@@ -43,7 +43,7 @@ namespace Hyssop.Server.Services.MenuItemService
             var response = new ServiceResponse<List<MenuItem>>
             {
                 Data = await _db.MenuItems
-     .Where(m => m.Meal.Url.ToLower().Equals(mealTypeUrl.ToLower()))
+     .Where(m => m.MealType.Url.ToLower().Equals(mealTypeUrl.ToLower()))
      .Include(m => m.MenuItemVariants)
      .ToListAsync()
             };
@@ -88,8 +88,8 @@ namespace Hyssop.Server.Services.MenuItemService
             var response = new ServiceResponse<List<MenuItem>>
             {
                 Data = await _db.MenuItems
-    .Where(p => p.Special)
-    .Include(p => p.MenuItemVariants)
+    .Where(s => s.Special)
+    .Include(s => s.MenuItemVariants)
     .ToListAsync()
             };
 

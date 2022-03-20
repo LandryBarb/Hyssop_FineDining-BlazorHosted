@@ -1,0 +1,54 @@
+﻿@inject IMenuItemService ms
+@implements IDisposable
+
+
+	
+	@if (ms.MenuItems == null || ms.MenuItems.Count == 0)
+	{
+		<span>@ms.Message</span>
+	}
+	else
+	{
+		<section class="featured_menuItem_section">
+			c
+		
+		<div class="featured_menuItem_container">
+
+			
+			@foreach(var menuItem in ms.MenuItems)
+			{
+				@if (menuItem.Special)
+				{
+					<div class="featured_menuItem">
+						<a href="menuItem/@menuItem.Id">
+							<img src="@menuItem.ImageUrl" alt="@menuItem.Name" />
+						</a>
+
+							<h4>
+						<a href="menuItem/@menuItem.Id" class="featured_menuItem_link">@menuItem.Name</a>
+						@if (menuItem.MenuItemVariants != null && menuItem.MenuItemVariants.Count > 0)
+						{
+							<h5 class="price">
+								$@menuItem.MenuItemVariants[0].Price
+							</h5>
+						}
+					</h4>
+					</div>
+				
+				}
+			}
+		</div>
+		</section>
+	}
+
+
+@code {
+	protected override void OnInitialized()
+	{
+		ms.MenuItemsChanged += StateHasChanged;
+	}
+	public void Dispose()
+	{
+		ms.MenuItemsChanged -= StateHasChanged;
+	}
+}

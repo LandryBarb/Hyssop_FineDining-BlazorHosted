@@ -1,0 +1,61 @@
+﻿@inject IMenuItemService MS
+@inject NavigationManager NavMan
+
+
+<div class="search">
+	<div class="search_form">
+		<input @bind-value="searchText"
+			   @bind-value:event="oninput"
+			   type="search"
+			   list="menuItems"
+			   @onkeyup="HandleSearch"
+			   class="search_input"
+			   placeholder="Search..."
+			   @ref="searchInput" />
+
+		<datalist id="products">
+			@foreach (var suggestion in suggestions)
+			{
+				<options>@suggestion</options>
+			}
+		</datalist>
+
+		<button class="search_btn" @onclick="SearchProducts">
+			<i class="fas fa-search"></i>
+		</button>
+
+	</div>
+</div>
+
+
+@code {
+	private string searchText = string.Empty;
+	private List<string> suggestions = new List<string>();
+	protected ElementReference searchInput;
+
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+		if (firstRender)
+		{
+			await searchInput.FocusAsync();
+		}
+	}
+
+	public void SearchProducts()
+	{
+		NavMan.NavigateTo($"search/{searchText}/1");
+	}
+
+	public async Task HandleSearch(KeyboardEventArgs args)
+	{
+		if (args.Key == null || args.Key.Equals("Enter"))
+		{
+			SearchProducts();
+		}
+		else if (searchText.Length > 1)
+		{
+			suggestions = await MS.GetMenuItemSearchSuggestions(searchText);
+		}
+
+	}
+}

@@ -1,0 +1,79 @@
+﻿@page "/menuItem/{id:int}"
+@inject IMenuItemService menuServ
+
+@if (menuItem == null)
+{
+	<span>@message</span>
+}
+else
+{
+	<section class="product_detail">
+
+	
+	<div class="product_detail_img">
+		<img class="product_img" src="@menuItem.ImageUrl" alt="@menuItem.Name"/>
+	</div>
+	<div class="product_detail_body">
+		<h2 class="product_detail_heading">@menuItem.Name</h2>
+		<p>@menuItem.Description</p>
+		@if (menuItem.MenuItemVariants != null && menuItem.MenuItemVariants.Count > 1)
+		{
+			<div class="product_detail_variants">
+				<select class = "form-select" @bind="currentTypeId">
+					@foreach (var variant in menuItem.MenuItemVariants)
+					{
+						<option value = "@variant.MenuItemTypeId">@variant.MenuItemType.Name</option>
+					}
+				</select>
+			</div>
+		}
+		@if (GetSelectedVariant() != null)
+	   {
+		   @if (GetSelectedVariant().NormalPrice > GetSelectedVariant().Price)
+		  {
+			  <h6 class=" original_price">
+				  $@GetSelectedVariant().NormalPrice
+			  </h6>
+		  }
+		  <h4 class="product_detail_price">
+			$@GetSelectedVariant().Price
+		</h4>
+	   }
+		
+	</div>
+	</section>
+}
+
+@code {
+	private MenuItem? menuItem = null;
+	private string message = string.Empty;
+	private int currentTypeId = 1;
+
+	[Parameter]
+	public int Id { get; set; }
+
+
+
+	protected override async Task OnParametersSetAsync()
+	{
+		message = "Loading Menu Item...";
+		var result = await menuServ.GetMenuItem(Id);
+		if (!result.Success)
+		{
+			message = result.Message;
+		}
+		else
+		{
+			menuItem = result.Data;
+			if (menuItem?.MenuItemVariants.Count > 0)
+			{
+				currentTypeId = menuItem.MenuItemVariants[0].MenuItemTypeId;
+			}
+		}
+	}
+	private MenuItemVariant GetSelectedVariant()
+		{
+			var variant = menuItem?.MenuItemVariants.FirstOrDefault(v => v.MenuItemTypeId == currentTypeId);
+			return variant;
+		}
+}

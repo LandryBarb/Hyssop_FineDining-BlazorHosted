@@ -1,6 +1,4 @@
 ﻿using Hyssop.Server.Configurations.Entities;
-using Hyssop.Shared.Menu;
-using Microsoft.EntityFrameworkCore;
 
 namespace Hyssop.Server.Data
 {
@@ -19,7 +17,7 @@ namespace Hyssop.Server.Data
             base.OnModelCreating(modelBuilder);
 
             //composite key
-            modelBuilder.Entity<MenuItemVariant>().HasKey(p => new { p.MenuItemId, p.MenuItemTypeId });
+
 
             modelBuilder.ApplyConfiguration(new MenuItemSeedConfig());
             modelBuilder.ApplyConfiguration(new MenuItemTypeSeedConfig());

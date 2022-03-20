@@ -1,11 +1,11 @@
+global using Hyssop.Client.Services.MealTypeService;
+global using Hyssop.Client.Services.MenuItemService;
 global using Hyssop.Shared;
 global using Hyssop.Shared.DTO;
 global using Hyssop.Shared.Menu;
 global using System.Net.Http.Json;
 
 using Hyssop.Client;
-using Hyssop.Client.Services.MealTypeService;
-using Hyssop.Client.Services.MenuItemService;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 

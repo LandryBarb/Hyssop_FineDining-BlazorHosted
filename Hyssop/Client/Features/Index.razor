@@ -1,14 +1,74 @@
 ﻿@page "/"
+@page "/search/{searchText}/{page:int}"
+@page "/{mealTypeUrl}"
+@inject IMealTypeService MealTypeService
+@inject IMenuItemService MenuItemService
 
-<PageTitle>Index</PageTitle>
+<PageTitle>Hyssop</PageTitle>
 
-<h1>Hello, world!</h1>
+@if (SearchText == null && MealTypeUrl == null)
+{
+	<FeaturedItem/>
+}
+else
+{
+	<MenuItems/>
+}
 
-Welcome to your new app.
-
-<button class="btn">test</button>
 
 
-<div class="card">
+@if (SearchText == null && MealTypeUrl == null)
+{
+	<section class="categories">
 
-</div>
+		
+
+		<div class="category_grid_container">
+			@foreach (MealType item in MealTypeService.MealTypes)
+			{
+				<div class="category_item grid_item">
+					<a href="/@item.Url" class="gallery_link">
+						<img src="@item.ImageUrl" alt="" />
+						<h3 class="category_name">@item.Name</h3>
+						<p class="description">
+							Ipsum gravida vel pretium tellus tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut.
+						</p>
+
+					</a>
+
+				</div>
+			}
+		</div>
+
+	</section>
+
+}
+
+
+
+
+
+
+@code{
+    private MealType? mealType = new MealType();
+    private MenuItem? menuItem = new MenuItem();
+    
+    [Parameter]
+    public string? MealTypeUrl { get; set; } = null;
+    [Parameter]
+    public string? SearchText { get; set; }
+    [Parameter]
+    public int Page { get; set; } = 1;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (SearchText != null)
+        {
+            await MenuItemService.SearchMenuItems(SearchText, Page);
+        }
+        else
+        {
+            await MenuItemService.GetMenuItems(MealTypeUrl);
+        }
+    }
+}

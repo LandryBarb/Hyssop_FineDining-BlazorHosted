@@ -1,0 +1,80 @@
+﻿@inject IMenuItemService ms
+@implements IDisposable
+
+
+@if (ms.MenuItems == null || ms.MenuItems.Count == 0)
+{
+	<span>@ms.Message</span>
+}
+else
+{
+	
+	<section class="menuItem_list_container">
+
+	
+<ul class="menuItem_list">
+	@foreach (var menuItem in ms.MenuItems )
+   {
+	   <li class="menuItem_list_item">
+		   <div class="menuItem_detail_img">
+			   <a href="/menuItem/@menuItem.Id">
+					<img src="@menuItem.ImageUrl" alt="@menuItem.Name" class="menuItem_img" />
+			   </a>
+		   </div>
+			<div class="menuItem_list_body">
+				<a href="/menuItem/@menuItem.Id">
+					<h4 class=".menuItem_title">@menuItem.Name</h4>
+				</a>
+				@*<p>@menuItem.Description</p>*@
+				<h5 class="menuItem_detail_price">
+					@GetPriceText(menuItem)
+				</h5>
+			</div>
+	   </li>
+   }
+</ul>
+</section>
+
+//pagination buttons
+for (var i = 1; i <= ms.PageCount; i++)
+{
+	<a href="/search/@ms.LastSearchText/@i" 
+		class="btn 
+		@(i==ms.CurrentPage ? "btn-info" : "btn-outline-info" )
+		page-selection">@i
+		</a>
+}
+}
+
+@code {
+
+
+	protected override void OnInitialized()
+	{
+		ms.MenuItemsChanged += StateHasChanged;
+	}
+
+	public void Dispose()
+	{
+		ms.MenuItemsChanged -= StateHasChanged;
+
+	}
+
+	//Method to get MenuItem Price
+	private string GetPriceText(MenuItem menuItem)
+	{
+		var variants = menuItem.MenuItemVariants;
+		if (variants.Count == 0)
+		{
+			return string.Empty;
+		}
+		else if(variants.Count == 1)
+		{
+			return $"${variants[0].Price}";
+		}
+		decimal minPrice = variants.Min(v => v.Price);
+		return $"Starting at ${minPrice}";
+
+	}
+
+}
