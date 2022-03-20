@@ -1,0 +1,321 @@
+/**primary Colors**/
+.txt_primary_100 {
+  color: #221d16;
+}
+
+.bg_primary_100 {
+  background-color: #221d16;
+}
+
+.txt_primary_200 {
+  color: #41382a;
+}
+
+.bg_primary_200 {
+  background-color: #41382a;
+}
+
+.txt_primary_300 {
+  color: #60523e;
+}
+
+.bg_primary_300 {
+  background-color: #60523e;
+}
+
+.txt_primary_400 {
+  color: #806c52;
+}
+
+.bg_primary_400 {
+  background-color: #806c52;
+}
+
+.txt_primary_500 {
+  color: #9e8767;
+}
+
+.bg_primary_500 {
+  background-color: #9e8767;
+}
+
+.txt_primary_600 {
+  color: #b19f86;
+}
+
+.bg_primary_600 {
+  background-color: #b19f86;
+}
+
+.txt_primary_700 {
+  color: #c5b8a5;
+}
+
+.bg_primary_700 {
+  background-color: #c5b8a5;
+}
+
+/** End primary Colors**/
+/**secondary Colors**/
+.txt_secondary_100 {
+  color: #3a2a17;
+}
+
+.bg_secondary_100 {
+  background-color: #3a2a17;
+}
+
+.txt_secondary_200 {
+  color: #5f4426;
+}
+
+.bg_secondary_200 {
+  background-color: #5f4426;
+}
+
+.txt_secondary_300 {
+  color: #835e34;
+}
+
+.bg_secondary_300 {
+  background-color: #835e34;
+}
+
+.txt_secondary_400 {
+  color: #a87943;
+}
+
+.bg_secondary_400 {
+  background-color: #a87943;
+}
+
+.txt_secondary_500 {
+  color: #bf925f;
+}
+
+.bg_secondary_500 {
+  background-color: #bf925f;
+}
+
+.txt_secondary_600 {
+  color: #ceab83;
+}
+
+.bg_secondary_600 {
+  background-color: #ceab83;
+}
+
+.txt_secondary_700 {
+  color: #dcc4a7;
+}
+
+.bg_secondary_700 {
+  background-color: #dcc4a7;
+}
+
+/** End secondary Colors**/
+/**accent Colors**/
+.txt_accent_100 {
+  color: #351f08;
+}
+
+.bg_accent_100 {
+  background-color: #351f08;
+}
+
+.txt_accent_200 {
+  color: #62390f;
+}
+
+.bg_accent_200 {
+  background-color: #62390f;
+}
+
+.txt_accent_300 {
+  color: #8e5415;
+}
+
+.bg_accent_300 {
+  background-color: #8e5415;
+}
+
+.txt_accent_400 {
+  color: #ba6e1c;
+}
+
+.bg_accent_400 {
+  background-color: #ba6e1c;
+}
+
+.txt_accent_500 {
+  color: #df882a;
+}
+
+.bg_accent_500 {
+  background-color: #df882a;
+}
+
+.txt_accent_600 {
+  color: #e6a056;
+}
+
+.bg_accent_600 {
+  background-color: #e6a056;
+}
+
+.txt_accent_700 {
+  color: #ecb983;
+}
+
+.bg_accent_700 {
+  background-color: #ecb983;
+}
+
+/** End accent Colors**/
+/**neutral Colors**/
+.txt_neutral_100 {
+  color: #312e2b;
+}
+
+.bg_neutral_100 {
+  background-color: #312e2b;
+}
+
+.txt_neutral_200 {
+  color: #4c4843;
+}
+
+.bg_neutral_200 {
+  background-color: #4c4843;
+}
+
+.txt_neutral_300 {
+  color: #67615b;
+}
+
+.bg_neutral_300 {
+  background-color: #67615b;
+}
+
+.txt_neutral_400 {
+  color: #827b73;
+}
+
+.bg_neutral_400 {
+  background-color: #827b73;
+}
+
+.txt_neutral_500 {
+  color: #9a958d;
+}
+
+.bg_neutral_500 {
+  background-color: #9a958d;
+}
+
+.txt_neutral_600 {
+  color: #b2aea9;
+}
+
+.bg_neutral_600 {
+  background-color: #b2aea9;
+}
+
+.txt_neutral_700 {
+  color: #cac7c4;
+}
+
+.bg_neutral_700 {
+  background-color: #cac7c4;
+}
+
+/** End neutral Colors**/
+:root {
+  /**Colors**/
+  --clr-primary-100: #221d16;
+  --clr-primary-200: #41382a;
+  --clr-primary-300: #60523e;
+  --clr-primary-400: #806c52;
+  --clr-primary-500: #9e8767;
+  --clr-primary-600: #b19f86;
+  --clr-primary-700: #c5b8a5;
+  --clr-secondary-100: #3a2a17;
+  --clr-secondary-200: #5f4426;
+  --clr-secondary-300: #835e34;
+  --clr-secondary-400: #a87943;
+  --clr-secondary-500: #bf925f;
+  --clr-secondary-600: #ceab83;
+  --clr-secondary-700: #dcc4a7;
+  --clr-accent-100: #351f08;
+  --clr-accent-200: #62390f;
+  --clr-accent-300: #8e5415;
+  --clr-accent-400: #ba6e1c;
+  --clr-accent-500: #df882a;
+  --clr-accent-600: #e6a056;
+  --clr-accent-700: #ecb983;
+  --clr-neutral-100: #312e2b;
+  --clr-neutral-200: #4c4843;
+  --clr-neutral-300: #67615b;
+  --clr-neutral-400: #827b73;
+  --clr-neutral-500: #9a958d;
+  --clr-neutral-600: #b2aea9;
+  --clr-neutral-700: #cac7c4;
+  /**End Colors**/
+  /**Type-Scale - Small**/
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.563rem;
+  --fs-600: 1.953rem;
+  --fs-700: 2.441rem;
+  --fs-800: 3.052rem;
+  /**Type-Scale - Small **/
+}
+@media only screen and (min-width: 65em) {
+  :root {
+    /**Type-Scale - Medium **/
+    --fs-300: 1rem;
+    --fs-400: 1.425rem;
+    --fs-500: 2rem;
+    --fs-600: 2.827rem;
+    --fs-700: 4rem;
+    --fs-800: 5.653rem;
+    /**Type-Scale - Medium **/
+  }
+}
+
+.btn {
+  transition: transform 350ms ease-in-out;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: transform 350ms ease-in-out;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
+.btn:hover, .btn:focus {
+  transform: scale(1.05);
+}
+.btn:hover::before, .btn:focus::before {
+  opacity: 1;
+}
+
+.card {
+  position: relative;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/*# sourceMappingURL=main.css.map */

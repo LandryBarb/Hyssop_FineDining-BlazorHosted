@@ -1,0 +1,33 @@
+﻿@use '../abstracts' as *;
+@use './typography' as *;
+@use '../media-queries' as *;
+
+:root {
+    /**Colors**/
+    @each $color, $shades in $colors {
+        @each $shade, $value in $shades {
+            --clr-#{$color}-#{$shade}: #{$value};
+        }
+    }
+    /**End Colors**/
+    /**Type-Scale - Small**/
+    @each $screen-size, $font-size in $type-scale {
+        @if $screen-size == small {
+            @each $size, $value in $font-size {
+                --fs-#{$size}: #{$value};
+            }
+            /**Type-Scale - Small **/
+        }
+
+        @else {
+
+            @include mediaQry(medium) {
+                /**Type-Scale - Medium **/
+                @each $size, $value in $font-size {
+                    --fs-#{$size}: #{$value};
+                }
+                /**Type-Scale - Medium **/
+            }
+        }
+    }
+}

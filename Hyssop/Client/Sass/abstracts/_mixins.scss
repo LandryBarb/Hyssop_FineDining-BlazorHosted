@@ -1,0 +1,46 @@
+﻿@use './variables' as *;
+@use './functions' as *;
+
+
+
+@mixin pseudo( 
+    $loc: before, 
+    $content: '', 
+    $pos: absolute,
+    $top:0,
+    $bottom:0,
+    $left:0,
+    $right:0
+    ){
+    position:relative;
+
+    &::#{$loc}{
+        content:$content;
+        position:$pos;
+        top:$top;
+        bottom:$bottom;
+        left:$left;
+        right:$right;
+        @content;
+    }
+}
+
+@mixin hover-lift() {
+    transition: $transition-base;
+    box-shadow: 0 .25em .5em 0 rgba(black, .2);
+
+    @include pseudo($loc:before) {
+        transition: $transition-base;
+        box-shadow: 0 .25em .5em 0 rgba(black, .2);
+        opacity: 0;
+    }
+
+    &:hover,
+    &:focus {
+        transform: scale(1.05);
+
+        &::before {
+            opacity: 1;
+        }
+    }
+}

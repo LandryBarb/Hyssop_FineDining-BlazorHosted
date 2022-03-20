@@ -1,0 +1,12 @@
+C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Shared\bin\Debug\net6.0\Hyssop.Shared.deps.json
+C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Shared\bin\Debug\net6.0\Hyssop.Shared.dll
+C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Shared\bin\Debug\net6.0\Hyssop.Shared.pdb
+C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Shared\obj\Debug\net6.0\Hyssop.Shared.csproj.AssemblyReference.cache
+C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Shared\obj\Debug\net6.0\Hyssop.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Shared\obj\Debug\net6.0\Hyssop.Shared.AssemblyInfoInputs.cache
+C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Shared\obj\Debug\net6.0\Hyssop.Shared.AssemblyInfo.cs
+C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Shared\obj\Debug\net6.0\Hyssop.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Shared\obj\Debug\net6.0\Hyssop.Shared.dll
+C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Shared\obj\Debug\net6.0\refint\Hyssop.Shared.dll
+C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Shared\obj\Debug\net6.0\Hyssop.Shared.pdb
+C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Shared\obj\Debug\net6.0\ref\Hyssop.Shared.dll

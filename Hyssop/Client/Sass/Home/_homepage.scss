@@ -1,0 +1,11 @@
+﻿@use '../abstracts' as *;
+@use '../base' as *;
+
+
+.btn{
+    @include hover-lift();
+}
+
+.card {
+    @include pseudo();
+}
