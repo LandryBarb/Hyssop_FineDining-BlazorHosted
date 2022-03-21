@@ -119,3 +119,19 @@
     </li>
     </ul>
   </p>
+  
+  <h1>
+  DevLog 2022-3-21 
+  </h1>
+  
+<h2>
+ Seccond Section of HomePage Started - 7:30am 
+  </h2>
+   <ul>
+        <li>
+         Created Banner component to separate sections
+        </li>
+          <li>
+         Injected Meal service to display items dynamically - Mark up - Needs Styles - 8:45am
+        </li>
+      </ul>
