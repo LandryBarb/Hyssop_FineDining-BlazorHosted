@@ -1,5 +1,7 @@
 ﻿@page "/"
 @inject NavigationManager navman
+@inject IMealTypeService MealService
+@inject IMenuItemService MenuService
 
 @*
 @inject IMealTypeService MealTypeService
@@ -11,6 +13,9 @@
 @*/**HOME PAGE ***/*@
 @*/*** SECTION 1 START ***/*@
 
+<div class="container">
+
+   
 <section class="landing">
     
     <SectionHeader HeadingText="@HeadingText"  @attributes="HeadingAttributes"></SectionHeader>
@@ -30,9 +35,36 @@
      <img src="./images/background/bg1.jpg" alt="" />
  </div>
 
-    
+   
 </section>
+
+</div>
+
+<div class="container">
+     <BottomBannerComponenent BannerClass="landing_banner"
+                            ChildClassContent="banner_content"
+    ></BottomBannerComponenent>
+</div>
+
 @*/*** END SECTION 1 ***/*@
+
+@*SECTION 2 - START*@
+<section class="section cuisine bg_primary_100">
+    <div class="heading">
+        <h3>Specialties</h3>
+        <p>Our special cuisine</p>
+    </div>
+   
+   @foreach (var item in MealService.MealTypes)
+  {
+      <div>
+          @item.Name
+      </div>
+  }
+</section>
+@*SECTION 2 - END*@
+
+
 @*/*** HOME PAGE ***/*@
 
 @*}
@@ -59,26 +91,38 @@ else
 
     };
 
-   
-    @*   private MealType? mealType = new MealType();
-  private MenuItem? menuItem = new MenuItem();
-  
-  [Parameter]
-  public string? MealTypeUrl { get; set; } = null;
-  [Parameter]
-  public string? SearchText { get; set; }
-  [Parameter]
-  public int Page { get; set; } = 1;
 
-  protected override async Task OnParametersSetAsync()
-  {
-      if (SearchText != null)
-      {
-          await MenuItemService.SearchMenuItems(SearchText, Page);
-      }
-      else
-      {
-          await MenuItemService.GetMenuItems(MealTypeUrl);
-      }
-  }*@
+    private MealType? meal = new MealType();
+    private MenuItem? menu = new MenuItem();
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await MealService.GetAllMealTypes();
+       
+    }
+
+
+    //  @*   private MealType? mealType = new MealType();
+    //      private MenuItem? menuItem = new MenuItem();
+
+    //[Parameter]
+    //public string? MealTypeUrl { get; set; } = null;
+    //[Parameter]
+    //public string? SearchText { get; set; }
+    //[Parameter]
+    //public int Page { get; set; } = 1;
+
+    //protected override async Task OnParametersSetAsync()
+    //{
+    //    if (SearchText != null)
+    //    {
+    //        await MenuItemService.SearchMenuItems(SearchText, Page);
+    //    }
+    //    else
+    //    {
+    //        await MenuItemService.GetMenuItems(MealTypeUrl);
+    //    }
+    //}*@
 }

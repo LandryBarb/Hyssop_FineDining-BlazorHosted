@@ -1,0 +1,23 @@
+﻿<section class="@BannerClass bg_primary_100">
+    @foreach (var item in childContent)
+    {
+          <div class=" txt_accent_600">
+        <p class="@ChildClassContent">@item </p>
+    </div>
+    }
+  
+   
+</section>
+
+
+@code{
+    
+    string[] childContent = new string[4] {"Coop", "deliveroo", "hunkemoller", "sauter"};
+
+    [Parameter]
+    public string BannerClass { get; set; }
+    [Parameter]
+    public string ChildClassContent { get; set; }
+
+    
+}
