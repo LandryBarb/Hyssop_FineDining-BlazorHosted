@@ -10,14 +10,36 @@
   Creation of Fine Dining Restaurant
   </h2>
   <p>
-  Tech Employed
+  Tech Employed / Features Used
   </p>
   <ul>
   <li>
     Blazor Wasm Hosted
+   <ul>
+    <li>
+     Component based layout
+    </li>
+     <li>
+     Attribute Splatting for Button components
+    </li>
+     <li>
+     Dynamically Generated Navgiation menu w/ programmatic routing
+    </li>
+   </ul>
   </li>
   <li>
     Sass Custom Design system
+   <ul>
+    <li>
+     Custom color map
+    </li>
+       <li>
+     Dynamically generated custom properties
+    </li>
+     <li>
+     Custome mixin created to Programmatically change font size based on screen size
+    </li>
+   </ul>
   </li>
   <li>
     Sql Server DB
