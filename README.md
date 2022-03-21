@@ -1,4 +1,7 @@
 ﻿# Hyssop_FineDining-BlazorHosted
+ ![landing](https://user-images.githubusercontent.com/71806398/159197638-491e0c69-5c83-4e7c-a24c-603a554f8d86.png)
+
+ 
 <h1>
   DevLog 2022-3-20 
   </h1>
@@ -74,5 +77,16 @@
           Featured Items
         </li>
       </ul>
+    <li>
+      Finished Landing Page - 7:21pm
+      <ul>
+        <li>
+          Markup, Styles
+        </li>
+          <li>
+          Navigation fuctionality
+        </li>
+      </ul>
+    </li>
     </ul>
   </p>
