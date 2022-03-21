@@ -5,10 +5,88 @@
 Using mix() will help control color lighten and darken better
 **/
 
-.btn{
+.landing {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+
+
+
+    .img_container {
+        width: 50%;
+    }
+
+    .backImage {
+        position: absolute;
+        left: 50vw;
+
+        img {
+            height: 100vh;
+        }
+    }
+
+    .frontImage {
+        position: absolute;
+        left: 43%;
+        bottom: 10%;
+        border-bottom: solid .2rem var(--clr-neutral-700);
+        border-right: solid .2rem var(--clr-neutral-700);
+
+
+        img {
+            width: 90vw;
+            height: 90vh;
+        }
+    }
+
+    #section_heading {
+        z-index: 10;
+        position: absolute;
+        width: 20ch;
+        left: 10vw;
+        top: 30vh;
+        letter-spacing: .2rem;
+        font-family: $ff-normal;
+    }
+
+    &_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 8rem;
+        position: absolute;
+        left: 10vw;
+        top: 53vh;
+
+        p {
+            width: 50ch;
+        }
+    }
+
+    &_btn {
+        @include hover-lift();
+        font-weight:600;
+        color: var(--clr-primary-200);
+        background-color: var(--clr-accent-600);
+        @extend %btn;
+        width: 10rem;
+        text-align: center;
+        border-bottom-left-radius: 3rem;
+        border-bottom: solid .2rem var(--clr-neutral-700);
+        border-left: solid .1rem var(--clr-primary-700);
+        position: relative;
+        font-family: $ff-normal;
+    }
+}
+
+
+.btn {
     @include hover-lift();
-    color:red;
-    background-color:blue;
+    color: va(--clr-primary-100);
+    background-color: var(--clr-accent-600);
     @extend %btn;
 }
 

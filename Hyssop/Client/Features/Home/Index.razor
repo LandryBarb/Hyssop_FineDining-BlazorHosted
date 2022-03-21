@@ -1,0 +1,84 @@
+﻿@page "/"
+@inject NavigationManager navman
+
+@*
+@inject IMealTypeService MealTypeService
+@inject IMenuItemService MenuItemService*@
+
+@*@if (SearchText == null && MealTypeUrl == null)
+{
+	*@
+@*/**HOME PAGE ***/*@
+@*/*** SECTION 1 START ***/*@
+
+<section class="landing">
+    
+    <SectionHeader HeadingText="@HeadingText"  @attributes="HeadingAttributes"></SectionHeader>
+    <div class="landing_text">
+          <p class="txt_neutral_700" >
+        Mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
+
+    </p>
+     <LandingButtonComponent btnText="@btnText" @attributes="buttonAttributes"  />
+    </div>
+  
+
+    <div class="img_container backImage">
+        <img src="./images/background/tanbg.jpg" alt="" />
+    </div>
+     <div class="img_container frontImage">
+     <img src="./images/background/bg1.jpg" alt="" />
+ </div>
+
+    
+</section>
+@*/*** END SECTION 1 ***/*@
+@*/*** HOME PAGE ***/*@
+
+@*}
+else
+{
+	<MenuItems/>
+}*@
+
+
+@code{
+    string HeadingText = "Feel the authentic & original taste from us";
+    string btnText = "See Menu";
+
+    public Dictionary<string, object> HeadingAttributes { get; set; } = new Dictionary<string, object>()
+    {
+        {"class", "txt_neutral_700" },
+        {"id", "section_heading"}
+    };
+
+    public Dictionary<string, object> buttonAttributes { get; set; } = new Dictionary<string, object>()
+    {
+        {"class" , "landing_btn"},
+        {"type", "button"}
+
+    };
+
+   
+    @*   private MealType? mealType = new MealType();
+  private MenuItem? menuItem = new MenuItem();
+  
+  [Parameter]
+  public string? MealTypeUrl { get; set; } = null;
+  [Parameter]
+  public string? SearchText { get; set; }
+  [Parameter]
+  public int Page { get; set; } = 1;
+
+  protected override async Task OnParametersSetAsync()
+  {
+      if (SearchText != null)
+      {
+          await MenuItemService.SearchMenuItems(SearchText, Page);
+      }
+      else
+      {
+          await MenuItemService.GetMenuItems(MealTypeUrl);
+      }
+  }*@
+}

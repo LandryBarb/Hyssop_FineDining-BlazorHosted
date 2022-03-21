@@ -1,0 +1,21 @@
+﻿@inject NavigationManager navman
+
+
+<button @attributes="buttonAttributes" @onclick="HandlePageNav" >
+   
+    @btnText</button>
+
+@code {
+
+     private void HandlePageNav()
+    {
+        navman.NavigateTo("/ourmenu");
+    }
+
+   [Parameter]
+    public string btnText {get;set;}
+  
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object>buttonAttributes{ get; set; }
+}

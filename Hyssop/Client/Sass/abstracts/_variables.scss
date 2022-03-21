@@ -5,6 +5,9 @@
 );
 
 
+$gap: 2rem;
+
 $transition-base : transform 350ms ease-in-out;
+$transition-cubic: all .3s cubic-bezier(1,0,0,1);
 
 $color: red;

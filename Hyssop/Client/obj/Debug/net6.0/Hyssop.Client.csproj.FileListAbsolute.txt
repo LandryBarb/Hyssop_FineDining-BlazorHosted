@@ -1,3 +1,4 @@
+C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Client\bin\Debug\net6.0\wwwroot\_framework\System.Text.RegularExpressions.dll
 C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Client\bin\Debug\net6.0\wwwroot\_framework\blazor.boot.json
 C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Client\bin\Debug\net6.0\wwwroot\_framework\blazor.webassembly.js
 C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Client\bin\Debug\net6.0\wwwroot\_framework\dotnet.6.0.3.k4rg04dpep.js
@@ -173,7 +174,6 @@ C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullSt
 C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Client\bin\Debug\net6.0\wwwroot\_framework\System.Text.Encoding.Extensions.dll
 C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Client\bin\Debug\net6.0\wwwroot\_framework\System.Text.Encodings.Web.dll
 C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Client\bin\Debug\net6.0\wwwroot\_framework\System.Text.Json.dll
-C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Client\bin\Debug\net6.0\wwwroot\_framework\System.Text.RegularExpressions.dll
 C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Client\bin\Debug\net6.0\wwwroot\_framework\System.Threading.Channels.dll
 C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Client\bin\Debug\net6.0\wwwroot\_framework\System.Threading.dll
 C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Client\bin\Debug\net6.0\wwwroot\_framework\System.Threading.Overlapped.dll
@@ -814,8 +814,8 @@ C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullSt
 C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Client\obj\Debug\net6.0\blazor.boot.json
 C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Client\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Client\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Client\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
-C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Client\obj\Debug\net6.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Client\obj\Debug\net6.0\scopedcss\Features\Layout\MainLayout.razor.rz.scp.css
+C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Client\obj\Debug\net6.0\scopedcss\Features\Layout\NavMenuComponent.razor.rz.scp.css
 C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Client\obj\Debug\net6.0\scopedcss\bundle\Hyssop.Client.styles.css
 C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Client\obj\Debug\net6.0\scopedcss\projectbundle\Hyssop.Client.bundle.scp.css
 C:\Users\Landry Barb II\Documents\WebDevelopment\Blazor\PortfolioProjects\FullStack\Hyssop\Hyssop\Client\obj\Debug\net6.0\Hyssop.Client.csproj.CopyComplete

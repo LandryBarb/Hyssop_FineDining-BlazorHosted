@@ -1,0 +1,72 @@
+﻿@inject IMealTypeService MealService
+@inject HttpClient http
+
+<!--NAV BAR-->
+@if (navMenu == null)
+{
+    <p>loading...</p>
+}
+else
+{
+     <nav class="nav">
+        <div class="nav_icon " @onclick="ToggleNavMenu">
+            <div class="menu_line menu_line_1"></div>
+            <div class="menu_line menu_line_2"></div>
+            <div class="menu_line menu_line_3"></div>
+
+        </div>
+
+        <ul class="nav_list ">
+            @foreach (var item in navMenu)
+            {
+                <li class="nav_list_item">
+                    <NavLink href="@item.Url" class="nav_list_item_link" ActiveClass="active" Match="NavLinkMatch.All">
+                        @item.Name
+                    </NavLink>
+                </li>
+            }
+        </ul>
+    </nav>
+
+}
+
+   
+@*@foreach (var item in MealService.MealTypes)
+{
+    <div class="second_nav_item">
+        <NavLink class="second_nav_link" href="@item.Url">
+            @item.Name
+        </NavLink>
+    </div>
+}*@
+
+
+<!--END NAV BAR-->
+@code {
+    private IEnumerable<NavMenuClass>? navMenu;
+
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await MealService.GetAllMealTypes();
+
+        try
+        {
+            navMenu = await http.GetFromJsonAsync<IEnumerable<NavMenuClass>>("data/nav-menu.json");
+        }
+        catch (HttpRequestException ex)
+        {
+            Console.WriteLine($"Could not load nav menu data: {ex.Message}");
+        }
+    }
+
+
+}

@@ -16,11 +16,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Sass\components\" />
-    <Folder Include="Sass\layouts\" />
+    <Folder Include="Features\Buttons\" />
     <Folder Include="Sass\root\" />
     <Folder Include="Sass\utilities\" />
+    <Folder Include="Shared\" />
     <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\images\menuItems\salad\" />
+    <Folder Include="wwwroot\images\menuItems\pasta\" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,12 @@
+﻿@use '../abstracts'as *;
+
+.container{
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width: 125rem;
+}
+
+.grid{
+    display:grid;
+    grid-gap: $gap;
+}

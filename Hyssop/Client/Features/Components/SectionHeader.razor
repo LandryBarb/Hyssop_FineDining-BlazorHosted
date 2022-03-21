@@ -1,0 +1,11 @@
+﻿
+<h2 @attributes="HeadingParameters">@HeadingText</h2>
+
+@code {
+    [Parameter]
+    public string HeadingText { get; set; }
+  
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object>HeadingParameters{ get; set; }
+}
