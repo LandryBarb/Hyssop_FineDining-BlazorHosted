@@ -9,6 +9,13 @@
 <h2>
   Creation of Fine Dining Restaurant
   </h2>
+  <h3>
+ Desired Features
+ </h3>
+ <p>
+ The goal is to create a high class, fine dining web application. Guests will be able to make reservations for dine in/takeout  or place orders for delivery. There will be a large selection of menu items so visitors need to have a smooth, clean and well articulated search process to find what they want. 
+ </p>
+ 
   <p>
   Tech Employed / Features Used
   </p>
