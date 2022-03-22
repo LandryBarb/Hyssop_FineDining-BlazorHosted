@@ -84,7 +84,7 @@
   Current Work Status  - FrontEnd - In Progress
   </h3>
   <p>
-  Recent work 
+   Work completed
   <ul>
    <li>
      Added Services - MenuItems & MealType - 10:27am
@@ -127,6 +127,9 @@
 <h2>
  Seccond Section of HomePage Started - 7:30am 
   </h2>
+  <p>
+ Work Completed
+ </p>
    <ul>
         <li>
          Created Banner component to separate sections
@@ -135,3 +138,37 @@
          Injected Meal service to display items dynamically - Mark up - Needs Styles - 8:45am
         </li>
       </ul>
+      
+  <h1>
+  DevLog 2022-3-22 
+  </h1>
+  
+<h2>
+ Seccond Section of HomePage In Progress - 11:30am 
+  </h2>
+  
+  ![section2](https://user-images.githubusercontent.com/71806398/159552554-16e4a1f2-fcfd-41e3-a912-c821647d5b0f.png)
+
+  <p>
+ Work Completed
+ </p>
+   <ul>
+        <li>
+       Mark up and Styles for Second section
+        </li>
+          <li>
+         Included video element with placeholder image
+        </li>
+      </ul>
+        <p>
+ Need to Complete
+ </p>
+ <ul>
+  <li>
+    Video Player Functionality
+  </li>
+ <li>
+  Clean up of SASS file for section 2
+ </li>
+ </ul>
+      
