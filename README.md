@@ -84,7 +84,7 @@
   Current Work Status  - FrontEnd - In Progress
   </h3>
   <p>
-  Recent work 
+   Work completed
   <ul>
    <li>
      Added Services - MenuItems & MealType - 10:27am
@@ -127,6 +127,9 @@
 <h2>
  Seccond Section of HomePage Started - 7:30am 
   </h2>
+  <p>
+ Work Completed
+ </p>
    <ul>
         <li>
          Created Banner component to separate sections
@@ -135,3 +138,4 @@
          Injected Meal service to display items dynamically - Mark up - Needs Styles - 8:45am
         </li>
       </ul>
+      
