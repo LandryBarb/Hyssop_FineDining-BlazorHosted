@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ryju0PwKrsqBpMq8+2KhOKf6BC5esEEEKkp1mXN93tk=",
+  "Hash": "mVNSF553M1Qnrgz9/bETIfM78gDLLwoHy+I11Uimgy8=",
   "Source": "Hyssop.Server",
   "BasePath": "_content/Hyssop.Server",
   "Mode": "Default",
@@ -6982,6 +6982,23 @@
       "OriginalItemSpec": "wwwroot\\icon-192.png"
     },
     {
+      "Identity": "C:\\Users\\Landry Barb II\\Documents\\WebDevelopment\\Blazor\\PortfolioProjects\\FullStack\\Hyssop\\Hyssop\\Client\\wwwroot\\images\\background\\banner.png",
+      "SourceId": "Hyssop.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Landry Barb II\\Documents\\WebDevelopment\\Blazor\\PortfolioProjects\\FullStack\\Hyssop\\Hyssop\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/background/banner.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\background\\banner.png"
+    },
+    {
       "Identity": "C:\\Users\\Landry Barb II\\Documents\\WebDevelopment\\Blazor\\PortfolioProjects\\FullStack\\Hyssop\\Hyssop\\Client\\wwwroot\\images\\background\\bg1.jpg",
       "SourceId": "Hyssop.Client",
       "SourceType": "Project",
@@ -7031,6 +7048,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\background\\tanbg.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Landry Barb II\\Documents\\WebDevelopment\\Blazor\\PortfolioProjects\\FullStack\\Hyssop\\Hyssop\\Client\\wwwroot\\images\\icons\\sandwich.png",
+      "SourceId": "Hyssop.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Landry Barb II\\Documents\\WebDevelopment\\Blazor\\PortfolioProjects\\FullStack\\Hyssop\\Hyssop\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/icons/sandwich.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\icons\\sandwich.png"
+    },
+    {
+      "Identity": "C:\\Users\\Landry Barb II\\Documents\\WebDevelopment\\Blazor\\PortfolioProjects\\FullStack\\Hyssop\\Hyssop\\Client\\wwwroot\\images\\icons\\steak.png",
+      "SourceId": "Hyssop.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Landry Barb II\\Documents\\WebDevelopment\\Blazor\\PortfolioProjects\\FullStack\\Hyssop\\Hyssop\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/icons/steak.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\icons\\steak.png"
+    },
+    {
+      "Identity": "C:\\Users\\Landry Barb II\\Documents\\WebDevelopment\\Blazor\\PortfolioProjects\\FullStack\\Hyssop\\Hyssop\\Client\\wwwroot\\images\\icons\\toast.png",
+      "SourceId": "Hyssop.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Landry Barb II\\Documents\\WebDevelopment\\Blazor\\PortfolioProjects\\FullStack\\Hyssop\\Hyssop\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/icons/toast.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\icons\\toast.png"
     },
     {
       "Identity": "C:\\Users\\Landry Barb II\\Documents\\WebDevelopment\\Blazor\\PortfolioProjects\\FullStack\\Hyssop\\Hyssop\\Client\\wwwroot\\images\\menuItems\\burgers\\burger1.jpg",
@@ -7167,6 +7235,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\Landry Barb II\\Documents\\WebDevelopment\\Blazor\\PortfolioProjects\\FullStack\\Hyssop\\Hyssop\\Client\\wwwroot\\video\\video1.mp4",
+      "SourceId": "Hyssop.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Landry Barb II\\Documents\\WebDevelopment\\Blazor\\PortfolioProjects\\FullStack\\Hyssop\\Hyssop\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "video/video1.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\video\\video1.mp4"
     }
   ]
 }

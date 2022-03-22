@@ -1,6 +1,4 @@
-﻿using Hyssop.Shared.Menu;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Hyssop.Server.Configurations.Entities
 {
@@ -15,21 +13,24 @@ namespace Hyssop.Server.Configurations.Entities
                     Id = 1,
                     Name = "Breakfast",
                     Url = "breakfast",
-                    ImageUrl = "../images/background/bg1.jpg"
+                    ImageUrl = "../images/background/bg1.jpg",
+                    Icon = "../images/icons/toast.png"
                 },
                  new MealType
                  {
                      Id = 2,
                      Name = "Lunch",
                      Url = "lunch",
-                     ImageUrl = "../images/background/bg1.jpg"
+                     ImageUrl = "../images/background/bg1.jpg",
+                     Icon = "../images/icons/sandwich.png"
                  },
                   new MealType
                   {
                       Id = 3,
                       Name = "Dinner",
                       Url = "dinner",
-                      ImageUrl = "../images/background/bg1.jpg"
+                      ImageUrl = "../images/background/bg1.jpg",
+                      Icon = "../images/icons/steak.png"
                   }
 
 

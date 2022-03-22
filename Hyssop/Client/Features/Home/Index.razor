@@ -3,86 +3,134 @@
 @inject IMealTypeService MealService
 @inject IMenuItemService MenuService
 
-@*
-@inject IMealTypeService MealTypeService
-@inject IMenuItemService MenuItemService*@
 
-@*@if (SearchText == null && MealTypeUrl == null)
-{
-	*@
 @*/**HOME PAGE ***/*@
 @*/*** SECTION 1 START ***/*@
 
 <div class="container">
 
-   
-<section class="landing">
-    
-    <SectionHeader HeadingText="@HeadingText"  @attributes="HeadingAttributes"></SectionHeader>
-    <div class="landing_text">
-          <p class="txt_neutral_700" >
-        Mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
 
-    </p>
-     <LandingButtonComponent btnText="@btnText" @attributes="buttonAttributes"  />
-    </div>
-  
+    <section class="landing">
 
-    <div class="img_container backImage">
-        <img src="./images/background/tanbg.jpg" alt="" />
-    </div>
-     <div class="img_container frontImage">
-     <img src="./images/background/bg1.jpg" alt="" />
- </div>
+        <SectionHeader HeadingContent="@HeadingText"></SectionHeader>
+        <div class="landing_text">
+            <p class="txt_neutral_700">
+                Mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
 
-   
-</section>
+            </p>
+            <LandingButtonComponent btnText="@btnText" @attributes="buttonAttributes" />
+        </div>
 
+
+        <div class="img_container backImage">
+            <img src="./images/background/tanbg.jpg" alt="" />
+        </div>
+        <div class="img_container frontImage">
+            <img src="./images/background/bg1.jpg" alt="" />
+        </div>
+
+
+    </section>
+
+
+    <BottomBannerComponenent BannerClass="landing_banner"
+                             ChildClassContent="banner_content"></BottomBannerComponenent>
+
+
+    @*/*** END SECTION 1 ***/*@
+
+    @*SECTION 2 - START*@
+
+    <section class="section cuisine bg_primary_100">
+
+        <SectionHeader HeadingContent="Meal Time Any Time"
+                       ParagraphContent="All Day" />
+
+        <div class="meal_container">
+            @foreach (var item in MealService.MealTypes)
+            {
+                <div class="meal_item">
+                    <img src="@item.Icon" alt="@item.Name" class="icon" />
+                    <h3>
+                        @item.Name
+                    </h3>
+
+                    <p class="meal_desc">
+                        Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.
+                    </p>
+                </div>
+            }
+        </div>
+
+        <div class="bottom_container">
+
+            <div class="video_image">
+                <img src="../images/background/landingbg.jpg" alt="" />
+                <i class="fa-regular fa-circle-play play-btn"></i>
+            </div>
+            <div class="video_player">
+                <video width="100%" controls autoplay>
+                    <source src="../video/video1.mp4" type="video/mp4" />
+
+                </video>
+                <i class="fa-solid fa-xmark close-btn"></i>
+
+            </div>
+
+            <div class="corner"></div>
+
+            <div class="content_about">
+                <h4 class="heading">About Us</h4>
+                <h3>We Serve You Better</h3>
+                <p>
+                    Ipsum gravida vel pretium tellus tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    @*SECTION 2 - END*@
+
+    <section class="info_banner bg_primary_100">
+
+        <div class="banner_content txt_accent_600">
+            <strong>20</strong>
+            <p > Restaurants</p>
+        </div>
+        <div class="banner_content txt_accent_600">
+            <strong>7</strong>
+
+            <p > Years of Service</p>
+        </div>
+        <div class="banner_content txt_accent_600">
+            <strong>50+</strong>
+
+            <p >Menu Dishes </p>
+        </div>
+        <div class="banner_content txt_accent_600">
+            <strong>300+</strong>
+
+            <p >Satified Diners </p>
+        </div>
+
+
+    </section>
+
+
+    @*/*** HOME PAGE ***/*@
 </div>
 
-<div class="container">
-     <BottomBannerComponenent BannerClass="landing_banner"
-                            ChildClassContent="banner_content"
-    ></BottomBannerComponenent>
-</div>
-
-@*/*** END SECTION 1 ***/*@
-
-@*SECTION 2 - START*@
-<section class="section cuisine bg_primary_100">
-    <div class="heading">
-        <h3>Specialties</h3>
-        <p>Our special cuisine</p>
-    </div>
-   
-   @foreach (var item in MealService.MealTypes)
-  {
-      <div>
-          @item.Name
-      </div>
-  }
-</section>
-@*SECTION 2 - END*@
 
 
-@*/*** HOME PAGE ***/*@
-
-@*}
-else
-{
-	<MenuItems/>
-}*@
-
-
-@code{
+@code {
     string HeadingText = "Feel the authentic & original taste from us";
     string btnText = "See Menu";
 
-    public Dictionary<string, object> HeadingAttributes { get; set; } = new Dictionary<string, object>()
-    {
-        {"class", "txt_neutral_700" },
-        {"id", "section_heading"}
-    };
+
+
 
     public Dictionary<string, object> buttonAttributes { get; set; } = new Dictionary<string, object>()
     {
@@ -100,7 +148,7 @@ else
     protected override async Task OnInitializedAsync()
     {
         await MealService.GetAllMealTypes();
-       
+
     }
 
 
@@ -125,4 +173,6 @@ else
     //        await MenuItemService.GetMenuItems(MealTypeUrl);
     //    }
     //}*@
+
+
 }

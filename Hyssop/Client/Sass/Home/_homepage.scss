@@ -39,15 +39,22 @@ Using mix() will help control color lighten and darken better
         }
     }
 
-    #section_heading {
+    .section_header {
         z-index: 10;
         position: absolute;
-        width: 20ch;
-        left: 10vw;
         top: 30vh;
-        letter-spacing: .2rem;
-        font-family: $ff-normal;
+        left: 10vw;
+
+        .section_heading {
+           
+            width: 20ch;
+            letter-spacing: .2rem;
+            font-family: $ff-normal;
+           @include section-Heading;
+        }
     }
+
+
 
     &_text {
         display: flex;
@@ -65,7 +72,7 @@ Using mix() will help control color lighten and darken better
 
     &_btn {
         @include hover-lift();
-        font-weight:600;
+        font-weight: 600;
         color: var(--clr-primary-200);
         background-color: var(--clr-accent-600);
         @extend %btn;
@@ -77,8 +84,6 @@ Using mix() will help control color lighten and darken better
         position: relative;
         font-family: $ff-normal;
     }
-
-    
 }
 
 .landing_banner {
@@ -86,15 +91,217 @@ Using mix() will help control color lighten and darken better
     bottom: 0;
     width: 100%;
     display: flex;
-    height: 7rem;
+    height:10rem;
     justify-content: space-evenly;
     align-items: center;
+    border-top: solid .2rem black;
+    border-bottom: solid .2rem black;
 
-    .banner_content{
+    .banner_content {
         font-family: $ff-normal;
-        font-size:var(--fs-500);
-        letter-spacing:.2rem;
-        font-weight:400;
+        font-size: var(--fs-500);
+        letter-spacing: .2rem;
+        font-weight: 400;
+        
+    }
+}
+
+
+
+.cuisine {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    justify-items: center;
+    align-content: space-around;
+
+
+    .section_header {
+        padding-top: 5rem;
+        text-align: center;
+        grid-column: 2;
+
+
+        .section_heading {
+            font-size: var(--fs-600);
+            font-family: $ff-cursive;
+            color: var(--clr-accent-700);
+        }
+
+        p {
+            color: var(--clr-neutral-700);
+            font-family: $ff-normal;
+            font-size: var(--fs-500);
+        }
+    }
+
+
+    .meal_container {
+        grid-row: 2;
+        grid-column: 1/-1;
+        display: flex;
+        gap: 2em;
+        justify-content: space-evenly;
+        height: 25rem;
+
+
+        .meal_item {
+            font-family: $ff-normal;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 25rem;
+            @include hover-lift();
+
+            .icon {
+                width: 15%;
+            }
+
+            h3 {
+                color: var(--clr-neutral-700);
+                font-size: var(--fs-400);
+            }
+
+            .meal_desc {
+                width: 20ch;
+                color: var(--clr-neutral-400);
+            }
+        }
+    }
+
+
+    .bottom_container {
+        position: relative;
+        grid-row: 3;
+        grid-column: 1/-1;
+        height: 40rem;
+        width: 100%;
+
+        video:focus {
+            outline: none;
+        }
+
+        .video_image {
+            position: absolute;
+            left: 20rem;
+            z-index: 2;
+
+            img {
+                width: 64rem;
+                height: 36rem;
+            }
+
+            .play-btn {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                font-size: 6rem;
+                transform: translate(-50%, -50%);
+                color: var(--clr-neutral-100);
+                cursor: pointer;
+            }
+        }
+
+        .video_player {
+            position: absolute;
+            left: 20rem;
+
+
+
+            video {
+                width: 64rem;
+                height: 36rem;
+            }
+
+
+
+            .close-btn {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-size: 3rem;
+                color: var(--clr-accent-400);
+            }
+        }
+
+        .corner {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 15rem;
+            width: 30rem;
+            background: url("../images/background/tanbg.jpg") center no-repeat;
+            background-size: cover;
+        }
+
+        .content_about {
+            position: absolute;
+            top: 20rem;
+            left: 74rem;
+            background-color: var(--clr-primary-200);
+            width: 26rem;
+            min-height: 12rem;
+            z-index: 2;
+            padding:2rem;
+
+
+            h4 {
+                color: var(--clr-accent-700);
+                font-family: $ff-cursive;
+                font-size: var(--fs-500);
+            }
+
+            h3 {
+                color: var(--clr-neutral-700);
+                font-size: var(--fs-500);
+                font-family: $ff-normal;
+                font-weight:600;
+            }
+
+            p {
+                
+                color: var(--clr-neutral-700);
+                font-family: $ff-normal;
+                line-height: 2rem;
+            }
+        }
+    }
+}
+
+.info_banner {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+  background:  linear-gradient(90deg, rgba(0,0,0,.7),rgba(0,0,0, .7)), url("../images/background/banner.png") no-repeat center;
+  background-size:cover;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: solid .2rem black;
+    border-bottom: solid .2rem black;
+   
+
+    .banner_content {
+        display:flex;
+        flex-direction:column;
+        font-family: $ff-normal;
+       
+        letter-spacing: .2rem;
+       
+        justify-content:center;
+        align-items:center;
+        padding:4rem 0;
+        strong{
+            font-size:var(--fs-500);
+            font-weight:600;
+        }
+
+        p{
+            color:var(--clr-neutral-700);
+            font-size:var(--fs-400);
+        }
     }
 }
 

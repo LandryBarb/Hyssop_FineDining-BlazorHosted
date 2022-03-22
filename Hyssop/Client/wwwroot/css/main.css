@@ -489,8 +489,6 @@ select {
   align-items: center;
   width: 100%;
   height: 90%;
-  border-left: solid 0.1rem #070606;
-  border-right: solid 0.1rem #070606;
 }
 .header .nav_list_item {
   list-style: none;
@@ -571,14 +569,19 @@ Using mix() will help control color lighten and darken better
   width: 90vw;
   height: 90vh;
 }
-.landing #section_heading {
+.landing .section_header {
   z-index: 10;
   position: absolute;
-  width: 20ch;
-  left: 10vw;
   top: 30vh;
+  left: 10vw;
+}
+.landing .section_header .section_heading {
+  width: 20ch;
   letter-spacing: 0.2rem;
   font-family: "Poppins", sans-serif;
+  font-size: var(--fs-700);
+  color: var(--clr-neutral-700);
+  text-transform: capitalize;
 }
 .landing_text {
   display: flex;
@@ -593,8 +596,7 @@ Using mix() will help control color lighten and darken better
   width: 50ch;
 }
 .landing_btn {
-  transition: transform 350ms ease-in-out;
-  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2);
+  transition: all 350ms ease-in-out;
   position: relative;
   font-weight: 600;
   color: var(--clr-primary-200);
@@ -614,12 +616,20 @@ Using mix() will help control color lighten and darken better
   bottom: 0;
   left: 0;
   right: 0;
-  transition: transform 350ms ease-in-out;
-  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2);
+  transition: all 350ms ease-in-out;
+  box-shadow: 0.1rem 0.1rem 0.1rem rgba(255, 255, 255, 0.9);
   opacity: 0;
 }
 .landing_btn:hover, .landing_btn:focus {
   transform: scale(1.05);
+  background-color: var(--clr-accent-600);
+  cursor: pointer;
+}
+.landing_btn:hover h3, .landing_btn:focus h3 {
+  color: var(--clr-primary-100);
+}
+.landing_btn:hover p, .landing_btn:focus p {
+  color: var(--clr-primary-100);
 }
 .landing_btn:hover::before, .landing_btn:focus::before {
   opacity: 1;
@@ -630,9 +640,11 @@ Using mix() will help control color lighten and darken better
   bottom: 0;
   width: 100%;
   display: flex;
-  height: 7rem;
+  height: 10rem;
   justify-content: space-evenly;
   align-items: center;
+  border-top: solid 0.2rem black;
+  border-bottom: solid 0.2rem black;
 }
 .landing_banner .banner_content {
   font-family: "Poppins", sans-serif;
@@ -641,9 +653,194 @@ Using mix() will help control color lighten and darken better
   font-weight: 400;
 }
 
+.cuisine {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  justify-items: center;
+  align-content: space-around;
+}
+.cuisine .section_header {
+  padding-top: 5rem;
+  text-align: center;
+  grid-column: 2;
+}
+.cuisine .section_header .section_heading {
+  font-size: var(--fs-600);
+  font-family: "Niconne", cursive;
+  color: var(--clr-accent-700);
+}
+.cuisine .section_header p {
+  color: var(--clr-neutral-700);
+  font-family: "Poppins", sans-serif;
+  font-size: var(--fs-500);
+}
+.cuisine .meal_container {
+  grid-row: 2;
+  grid-column: 1/-1;
+  display: flex;
+  gap: 2em;
+  justify-content: space-evenly;
+  height: 25rem;
+}
+.cuisine .meal_container .meal_item {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 25rem;
+  transition: all 350ms ease-in-out;
+  position: relative;
+}
+.cuisine .meal_container .meal_item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 350ms ease-in-out;
+  box-shadow: 0.1rem 0.1rem 0.1rem rgba(255, 255, 255, 0.9);
+  opacity: 0;
+}
+.cuisine .meal_container .meal_item:hover, .cuisine .meal_container .meal_item:focus {
+  transform: scale(1.05);
+  background-color: var(--clr-accent-600);
+  cursor: pointer;
+}
+.cuisine .meal_container .meal_item:hover h3, .cuisine .meal_container .meal_item:focus h3 {
+  color: var(--clr-primary-100);
+}
+.cuisine .meal_container .meal_item:hover p, .cuisine .meal_container .meal_item:focus p {
+  color: var(--clr-primary-100);
+}
+.cuisine .meal_container .meal_item:hover::before, .cuisine .meal_container .meal_item:focus::before {
+  opacity: 1;
+}
+.cuisine .meal_container .meal_item .icon {
+  width: 15%;
+}
+.cuisine .meal_container .meal_item h3 {
+  color: var(--clr-neutral-700);
+  font-size: var(--fs-400);
+}
+.cuisine .meal_container .meal_item .meal_desc {
+  width: 20ch;
+  color: var(--clr-neutral-400);
+}
+.cuisine .bottom_container {
+  position: relative;
+  grid-row: 3;
+  grid-column: 1/-1;
+  height: 40rem;
+  width: 100%;
+}
+.cuisine .bottom_container video:focus {
+  outline: none;
+}
+.cuisine .bottom_container .video_image {
+  position: absolute;
+  left: 20rem;
+  z-index: 2;
+}
+.cuisine .bottom_container .video_image img {
+  width: 64rem;
+  height: 36rem;
+}
+.cuisine .bottom_container .video_image .play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 6rem;
+  transform: translate(-50%, -50%);
+  color: var(--clr-neutral-100);
+  cursor: pointer;
+}
+.cuisine .bottom_container .video_player {
+  position: absolute;
+  left: 20rem;
+}
+.cuisine .bottom_container .video_player video {
+  width: 64rem;
+  height: 36rem;
+}
+.cuisine .bottom_container .video_player .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 3rem;
+  color: var(--clr-accent-400);
+}
+.cuisine .bottom_container .corner {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 15rem;
+  width: 30rem;
+  background: url("../images/background/tanbg.jpg") center no-repeat;
+  background-size: cover;
+}
+.cuisine .bottom_container .content_about {
+  position: absolute;
+  top: 20rem;
+  left: 74rem;
+  background-color: var(--clr-primary-200);
+  width: 26rem;
+  min-height: 12rem;
+  z-index: 2;
+  padding: 2rem;
+}
+.cuisine .bottom_container .content_about h4 {
+  color: var(--clr-accent-700);
+  font-family: "Niconne", cursive;
+  font-size: var(--fs-500);
+}
+.cuisine .bottom_container .content_about h3 {
+  color: var(--clr-neutral-700);
+  font-size: var(--fs-500);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.cuisine .bottom_container .content_about p {
+  color: var(--clr-neutral-700);
+  font-family: "Poppins", sans-serif;
+  line-height: 2rem;
+}
+
+.info_banner {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/background/banner.png") no-repeat center;
+  background-size: cover;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: solid 0.2rem black;
+  border-bottom: solid 0.2rem black;
+}
+.info_banner .banner_content {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+}
+.info_banner .banner_content strong {
+  font-size: var(--fs-500);
+  font-weight: 600;
+}
+.info_banner .banner_content p {
+  color: var(--clr-neutral-700);
+  font-size: var(--fs-400);
+}
+
 .btn {
-  transition: transform 350ms ease-in-out;
-  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2);
+  transition: all 350ms ease-in-out;
   position: relative;
   color: va(--clr-primary-100);
   background-color: var(--clr-accent-600);
@@ -655,12 +852,20 @@ Using mix() will help control color lighten and darken better
   bottom: 0;
   left: 0;
   right: 0;
-  transition: transform 350ms ease-in-out;
-  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2);
+  transition: all 350ms ease-in-out;
+  box-shadow: 0.1rem 0.1rem 0.1rem rgba(255, 255, 255, 0.9);
   opacity: 0;
 }
 .btn:hover, .btn:focus {
   transform: scale(1.05);
+  background-color: var(--clr-accent-600);
+  cursor: pointer;
+}
+.btn:hover h3, .btn:focus h3 {
+  color: var(--clr-primary-100);
+}
+.btn:hover p, .btn:focus p {
+  color: var(--clr-primary-100);
 }
 .btn:hover::before, .btn:focus::before {
   opacity: 1;

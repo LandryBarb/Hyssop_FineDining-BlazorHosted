@@ -31,17 +31,28 @@
 
 @mixin hover-lift() {
     transition: $transition-base;
-    box-shadow: 0 .25em .5em 0 rgba(black, .2);
+    
+
 
     @include pseudo($loc:before) {
         transition: $transition-base;
-        box-shadow: 0 .25em .5em 0 rgba(black, .2);
+        box-shadow: .1rem .1rem .1rem rgba(white, .9);
         opacity: 0;
     }
 
     &:hover,
     &:focus {
         transform: scale(1.05);
+        background-color: var(--clr-accent-600);
+        cursor:pointer;
+
+        h3 {
+            color: var(--clr-primary-100);
+        }
+
+        p {
+            color: var(--clr-primary-100);
+        }
 
         &::before {
             opacity: 1;

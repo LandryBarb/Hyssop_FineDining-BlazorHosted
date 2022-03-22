@@ -29,6 +29,9 @@ namespace Hyssop.Server.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<string>("Icon")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
@@ -46,6 +49,7 @@ namespace Hyssop.Server.Migrations
                         new
                         {
                             Id = 1,
+                            Icon = "../images/icons/toast.png",
                             ImageUrl = "../images/background/bg1.jpg",
                             Name = "Breakfast",
                             Url = "breakfast"
@@ -53,6 +57,7 @@ namespace Hyssop.Server.Migrations
                         new
                         {
                             Id = 2,
+                            Icon = "../images/icons/sandwich.png",
                             ImageUrl = "../images/background/bg1.jpg",
                             Name = "Lunch",
                             Url = "lunch"
@@ -60,6 +65,7 @@ namespace Hyssop.Server.Migrations
                         new
                         {
                             Id = 3,
+                            Icon = "../images/icons/steak.png",
                             ImageUrl = "../images/background/bg1.jpg",
                             Name = "Dinner",
                             Url = "dinner"
